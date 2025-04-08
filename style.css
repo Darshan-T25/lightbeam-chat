@@ -1,52 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+    font-family: sans-serif;
+    transition: background 0.3s, color 0.3s;
   }
-  
   .light-mode {
-    background-color: #ffffff;
-    color: #000000;
+    background: #fff;
+    color: #000;
   }
-  
   .dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+    background: #111;
+    color: #eee;
   }
-  
-  .chat-container {
+  #app {
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: auto;
+    padding: 1rem;
   }
-  
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
-  #chatHistory {
+  #chat {
     border: 1px solid #ccc;
     height: 300px;
     overflow-y: auto;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background: rgba(0,0,0,0.05);
   }
-  
-  .controls {
+  #inputArea {
     display: flex;
-    gap: 10px;
+    gap: 0.5rem;
   }
-  
-  #messageInput {
+  input {
     flex: 1;
-    padding: 10px;
+    padding: 0.5rem;
   }
-  
-  .transmission-method {
-    margin-top: 10px;
+  button {
+    padding: 0.5rem 1rem;
+  }
+  #flashAlert {
+    color: red;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+  .hidden {
+    display: none;
+  }
+  .flash-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    pointer-events: none;
   }
   

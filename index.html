@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LightBeam Chat</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="light-mode">
-  <div class="chat-container">
+  <div id="app">
     <header>
-      <h1>LightBeam Chat</h1>
-      <button id="themeToggle" aria-label="Toggle Light/Dark Mode">💡</button>
+      <h1>💬 LightBeam Chat</h1>
+      <div id="controls">
+        <button id="modeToggle">💡</button>
+        <select id="transmissionMode">
+          <option value="screen">Screen Flash</option>
+          <option value="flashlight">Flashlight</option>
+        </select>
+      </div>
     </header>
-    <div id="chatHistory"></div>
-    <div class="controls">
-      <input type="text" id="messageInput" placeholder="Type your message...">
-      <button id="sendButton">Send</button>
+
+    <div id="chat"></div>
+
+    <div id="inputArea">
+      <input type="text" id="messageInput" placeholder="Enter message..." />
+      <button id="sendBtn">Send</button>
     </div>
-    <div class="transmission-method">
-      <label>
-        <input type="radio" name="transmitMethod" value="screen" checked>
-        Screen Flash
-      </label>
-      <label>
-        <input type="radio" name="transmitMethod" value="flashlight">
-        Flashlight
-      </label>
-    </div>
+
+    <p id="flashAlert" class="hidden">⚠️ Flash permission required</p>
   </div>
+
   <script src="transmitter.js"></script>
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
